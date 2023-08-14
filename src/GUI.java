@@ -1,15 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import static java.awt.Color.*;
 
 public class GUI {
+    static Dimension sizing = Toolkit.getDefaultToolkit().getScreenSize();
+    int gapSize = (sizing.width - 1102);
     public JPanel createContentPane (){
         //Size of screen; will resize if on bigger monitor
-        Dimension sizing = Toolkit.getDefaultToolkit().getScreenSize();
-        int gapSize = (sizing.width - 1102);
 
         // We create a bottom JPanel to place everything on.
         JPanel totalGUI = new JPanel();
@@ -52,9 +50,6 @@ public class GUI {
     }
 
     private static void createAndShowGUI() {
-
-        //Size of screen; will resize if on bigger monitor
-        Dimension sizing = Toolkit.getDefaultToolkit().getScreenSize();
 
         JFrame frame = new JFrame("Menu Bar");
 
